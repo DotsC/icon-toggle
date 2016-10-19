@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script>
+      /*
+      window.Polymer = window.Polymer || {};
+      window.Polymer.dom = 'shadow';
+      */
+    </script>
+    <link rel="import" href="icon-toggle-demo.html">
+  
+    <style is="custom-style">
+			/* Define a document-wide default—will not override a :host rule in icon-toggle-demo */
+			:root {
+				--icon-toggle-outline-color: rgba(102,102,52,1);
+			}
+			/* Override the value specified in icon-toggle-demo, as this has a higher spcificity than :root inside icon-toggle-demo; */
+			icon-toggle-demo {
+				--icon-toggle-pressed-color: rgba(102,51,153,1);
+				--icon-toggle-color: rgba(102,51,153,0.2); 
+			}
+			/* This rule does not work! */
+			body {
+				--icon-toggle-color: rgba(102,51,153,0.2); /*so moved it to the icon-toggle-demo rule.*/
+			}
+    </style>
+
+  </head>
+  <body>
+    <icon-toggle-demo></icon-toggle-demo>
+  </body>
+</html>
